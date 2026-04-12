@@ -2,7 +2,6 @@
 @use '../abstracts/mixins' as *;
 
 .hero{
-    width: auto;
     position: relative;
     .tablet{
         display: none;
@@ -40,11 +39,11 @@
         }
     }
     .movil{
-        max-width: 500px;
+        max-width: 100%;
         max-height: 630px;
         position: relative;
         bottom: 16px;
-        right: 16px;
+        
         margin-bottom: 15px;
     }
     .tablet{
