@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as *;
+
+/* Mixins */
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+@mixin reset-link{
+  text-decoration: none;
+  color: $white;
+}
+
+@mixin button($color){
+  display: inline-flex;
+  background-color: $color;
+  padding: 20px 35px;
+}
+
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}

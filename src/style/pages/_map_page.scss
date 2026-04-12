@@ -1,0 +1,206 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.location{
+    height: 1300px;
+    @include breakpoint(tablet){
+        height: 1200px;
+    }
+    
+}
+main{
+    @include breakpoint(tablet){
+        margin-bottom: 0px;
+    }
+}
+.map_container{
+    margin: 0px;
+    overflow: visible;
+    width: 500px;
+    height: 550px;
+    position: relative;
+    right: 16px;
+    bottom: 16px;
+    background-image: url(../../img/Maps.png);
+    background-size:  100%;
+    @include breakpoint(tablet){
+        background-image: url(../../img/map-tablet.png);
+        width: 768px;
+        height: 600px;
+    }
+    @include breakpoint(desktopxl){
+        background-image: url(../../img/Maps-desktop.png);
+        width: 1910px;
+        height: 795px;
+    }
+    .container_button{
+       display: inline-flex;
+       @include breakpoint(tablet){
+        position: relative;
+        left: 40px;
+       }
+       @include breakpoint(desktopxl){
+        left: 205px;
+       }
+       &:hover{
+            a{
+                background-color: $orange;
+            }
+            img{
+                background-color: $black;
+            }
+        }
+        a{
+            @include reset-link;
+            @include button($black);
+            font-family: $titule-font;
+            font-size: 24px;
+            font-weight: 400;
+        }   
+        img{
+            margin: 0px;
+            background-color: $orange;
+            padding: 0px 20px;
+            height: auto;
+            cursor: pointer;
+        } 
+    }
+}
+
+.location_container{
+    margin: 0px;
+    position: relative;
+    bottom: 16px;
+    right: 16px;
+    background-color: $black;
+    width: 500px;
+    height: 495px;
+    padding: 40px 16px;
+    @include breakpoint(tablet){
+        width: 768px;
+        height: 436px;
+        display: grid;
+        grid-template-columns: 300px 468px;
+        gap: 10px;
+        padding-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @include breakpoint(desktopxl){
+        width: 1910px;
+        height: 500px;
+        padding-top: 100px;
+        justify-content: space-around;
+        
+    }
+    h1{
+        font-family: $titule-font;
+        font-size: 60px;
+        font-weight: bold;
+        color: $white;
+        margin-bottom: 30px;
+        @include breakpoint(tablet){
+            font-size: 70px;
+            grid-row: 1 / 6;
+            margin-bottom: 0px;
+        }
+        @include breakpoint(desktopxl){
+            font-size: 85px;
+        }
+    }
+    h2{
+        font-family: $titule-font;
+        font-size: 45px;
+        font-weight: bold;
+        color: $orange;
+        margin-bottom: 20px;
+        @include breakpoint(tablet){
+            margin-bottom: 0px;
+        }
+        @include breakpoint(desktopxl){
+            font-size: 55px;
+        }
+    }
+    p{
+        font-weight: 100;
+        color: $white;
+        max-width: 80%;
+        margin-bottom: 5px;
+        @include breakpoint(tablet){
+            margin-bottom: 0px;
+        }
+        @include breakpoint(desktopxl){
+            font-size: 20px;
+            font-weight: 300;
+        }
+    }
+    .address{
+        margin-bottom: 20px;
+    }
+    p:nth-of-type(4){
+        margin-top: 40px;
+    }
+}
+
+footer.secundary{
+    background-color: $orange;
+    position: relative;
+    bottom: 16px;
+    right: 16px;
+    width: 500px;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    @include breakpoint(tablet){
+        width: 768px;
+        height: 216px;
+        display: flex;
+        padding-left: 35px;
+        padding-right: 35px;
+        gap: 60px;
+        align-items: start;
+    }
+    @include breakpoint(desktopxl){
+        width: 1910px;
+        height: 300px;
+        justify-content: space-around;
+        padding-right: 0px;
+        padding-top: 100px;
+    }
+    .logo{
+        margin-bottom: 50px;
+        @include breakpoint(tablet){
+            margin: 0px;
+            width: 130px;
+            height: 50px;
+        }
+        @include breakpoint(desktopxl){
+            width: 200px;
+            height: 80px;
+        }
+    }
+    .red_social{
+        display: inline-flex;
+        gap: 20px;
+        cursor: pointer;
+        margin-bottom: 40px;
+        @include breakpoint(tablet){
+            position: relative;
+            left: 60px;
+        }
+    }
+    p{
+        color: $black;
+        font-weight: 300;
+        margin-bottom: 60px;
+        @include breakpoint(tablet){
+            width: 40%;
+        }
+        @include breakpoint(desktopxl){
+            font-size: 24px;
+            width: 33%;
+            font-weight: 400;
+        }
+    }
+}

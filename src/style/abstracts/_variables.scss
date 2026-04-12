@@ -1,0 +1,18 @@
+@use '../vendors/vendors' as *;
+/* Variables */
+
+/*FONTS*/
+$general-font: "Outfit", sans-serif;
+$titule-font: "Big Shoulders", sans-serif;
+
+/*COLORS*/
+$orange:rgba(213, 150, 108);
+$white: rgba(255, 255, 255);
+$black: rgba(21, 21, 21);
+$grey: rgba(68, 68, 68);
+
+// VIEWPORT SIZE
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;

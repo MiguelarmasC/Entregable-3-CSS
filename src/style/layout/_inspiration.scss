@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.inspiration{
+    background-color: $black;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    margin-bottom: 150px;
+    @include breakpoint(desktopxl){
+        padding-left: 60px;
+    }
+    h2{
+        font-family: $titule-font;
+        font-size: 60px;
+        line-height: 55px;
+        margin-bottom: 30px;
+        color: $white;
+        @include breakpoint(tablet){
+            font-size: 50px;
+        }
+        @include breakpoint(desktopxl){
+            font-size: 90px;
+            line-height: 85px;
+            width: 50%;
+        }
+    }
+    p{
+        color: $white;
+        max-width: 85%;
+        @include breakpoint(tablet){
+            
+            font-weight: 100;
+        }
+        @include breakpoint(desktopxl){
+            font-size: 24px;
+        }
+    }
+    @include breakpoint(tablet){
+        position: absolute;
+        left: 408px;
+        top:  690px;
+        width: 280px;
+        height: 410px;
+        margin: 0px;
+        padding-top: 90px;
+    }
+    @include breakpoint(desktopxl){
+        left: 885px;
+        top:  1000px;
+        width: 810px;
+        height: 450px;
+            
+    }
+
+}

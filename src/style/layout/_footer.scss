@@ -1,0 +1,74 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+footer.principal{
+    background-color: $black;
+    position: relative;
+    top: 16px;
+    right: 16px;
+    width: 500px;
+    height: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    @include breakpoint(tablet){
+        width: 700px;
+        height: 216px;
+        display: flex;
+        padding-left: 35px;
+        padding-right: 35px;
+        gap: 50px;
+        align-items: start;
+    }
+    @include breakpoint(desktopxl){
+        width: 1910px;
+        height: 300px;
+        justify-content: space-between;
+        padding-right: 0px;
+        padding-top: 100px;
+    }
+    .logotipo{
+        margin-bottom: 40px;
+        @include breakpoint(tablet){
+            margin: 0px;
+            width: 130px;
+            height: 50px;
+        }
+        @include breakpoint(desktopxl){
+            width: 200px;
+            height: 80px;
+        }
+    }
+    .red_social{
+        display: inline-flex;
+        gap: 20px;
+        
+        cursor: pointer;
+        @include breakpoint(tablet){
+            width: 20px;
+            height: 20px;
+        }
+        @include breakpoint(desktopxl){
+            position: relative;
+            right: 20%;
+        }
+
+    }
+    p{
+        color: $white;
+        font-weight: 100;
+        margin-bottom: 40px;
+        @include breakpoint(tablet){
+            margin: 0px;
+            max-width: 45%;
+        }
+        @include breakpoint(desktopxl){
+            font-size: 24px;
+            width: 33%;
+            font-weight: 400;
+            position: relative;
+            right: 12%;
+        }
+    }
+}

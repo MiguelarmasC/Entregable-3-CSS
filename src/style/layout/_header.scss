@@ -1,0 +1,157 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero{
+    width: auto;
+    position: relative;
+    .tablet{
+        display: none;
+    }
+    .desktop{
+        display: none;
+    }
+    @include breakpoint(tablet){
+        position: relative;
+        margin-bottom: 120px;
+        max-width: 768px;
+        .movil{
+            display: none;
+        }
+        .tablet{
+            display:block;
+        }
+    }
+    @include breakpoint(desktopxl){
+        &::after{
+            content: '';
+            display: block;
+            width: 650px;
+            height: 920px;
+            background-color: $black;
+            position: relative;
+            top: -16px;
+            left: -16px;
+        }
+        .tablet{
+            display: none;
+        }
+        .desktop{
+            display:block;
+        }
+    }
+    .movil{
+        max-width: 500px;
+        max-height: 630px;
+        position: relative;
+        bottom: 16px;
+        right: 16px;
+        margin-bottom: 15px;
+    }
+    .tablet{
+        @include breakpoint(tablet){
+            width: 437px;
+            height: 700px;
+        }
+    }
+    .desktop{
+        @include breakpoint(desktopxl){
+            position: absolute;
+            top: -16px;
+            left: 634px;
+            width: 650px;
+            height: 920px;
+
+        }
+    }
+    h1{
+        font-family: $titule-font;
+        font-size: 60px;
+        line-height: 55px;
+        color: $black;
+        margin-bottom: 30px;
+        font-weight: bold;
+        @include breakpoint(tablet){
+        position: absolute;
+        max-width: 50%;
+        font-size: 70px;
+        line-height: 65px;
+        font-weight: 900;
+        top: 130px;
+        left: 334px;
+        }
+        @include breakpoint(desktopxl){
+            max-width: 100%;
+            color: $white;
+            z-index: 1;
+            font-size: 130px;
+            line-height: 110px;
+            top: 205px;
+            left: 360px;
+        }
+    }
+    p{
+        color: $grey;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        @include breakpoint(tablet){
+        position: absolute;
+        max-width: 52%;
+        top: 320px;
+        left: 334px;
+        font-size: 20px;
+        }
+        @include breakpoint(desktopxl){
+            width: 50%;
+            top: 205px;
+            left: 1220px;
+            z-index: 1;
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+    .hero_button{
+        display: inline-flex;
+        margin-bottom: 120px;
+        @include breakpoint(tablet){
+            position: absolute;
+            top: 480px;
+            left: 334px;
+            width: 270px;
+        }
+        @include breakpoint(desktopxl){
+            left: 1220px;
+            top: 440px;
+        }
+        &:hover{
+            a{
+                background-color: $orange;
+            }
+            .flecha{
+                background-color: $black;
+            }
+        }
+        a{
+            @include reset-link;
+            @include button($black);
+            font-family: $titule-font;
+            font-size: 24px;
+            font-weight: 400;
+            @include breakpoint(tablet){
+                font-size: 30px;
+            }
+        }
+        .flecha{
+            margin: 0px;
+            background-color: $orange;
+            padding: 0px 20px;
+            position: relative;
+            top: 0px;
+            height: auto;
+            cursor: pointer;
+            @include breakpoint(tablet){
+                width: 20%;
+            }
+        } 
+    }
+}
