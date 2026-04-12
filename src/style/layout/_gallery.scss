@@ -1,9 +1,11 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-main.principal{
+.primary{
     @include breakpoint(tablet){
         position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     @include breakpoint(desktopxl){
         padding-left: 150px;
@@ -11,9 +13,10 @@ main.principal{
     }
     .gallery{
         @include breakpoint(tablet){
+            max-width: 1120px;
             display: grid;
             grid-template-columns: 400px 720px;
-            gap: 8px;
+            gap: 7px;
         }
         @include breakpoint(desktopxl){
             grid-template-columns: 700px 1000px;
@@ -113,7 +116,7 @@ main.principal{
             display: none;
             @include breakpoint(tablet){
                 display: block;
-                width: 280px;
+                width: 40%;
                 height: 300px;
             }
             @include breakpoint(desktopxl){

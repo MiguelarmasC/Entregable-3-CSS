@@ -1,6 +1,9 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+.container{
+    max-width: $bp-desktop-xl;
+}
 .hero{
     position: relative;
     .tablet{
@@ -43,7 +46,6 @@
         max-height: 630px;
         position: relative;
         bottom: 16px;
-        
         margin-bottom: 15px;
     }
     .tablet{

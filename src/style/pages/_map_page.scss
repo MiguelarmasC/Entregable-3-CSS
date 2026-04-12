@@ -17,15 +17,15 @@
     bottom: 16px;
     background-image: url(../../img/Maps.png);
     background-size:  100%;
+    background-repeat: no-repeat;
     @include breakpoint(tablet){
         background-image: url(../../img/map-tablet.png);
-        width: 768px;
         height: 600px;
+        background-repeat: repeat;
     }
-    @include breakpoint(desktopxl){
+    @include breakpoint(desktop){
         background-image: url(../../img/Maps-desktop.png);
-        width: 1910px;
-        height: 795px;
+        height: 790px;
     }
     .container_button{
        display: inline-flex;
@@ -71,7 +71,6 @@
     height: 495px;
     padding: 40px 16px;
     @include breakpoint(tablet){
-        width: 768px;
         height: 436px;
         display: grid;
         grid-template-columns: 300px 468px;
@@ -80,8 +79,7 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-    @include breakpoint(desktopxl){
-        width: 1910px;
+    @include breakpoint(desktop){
         height: 500px;
         padding-top: 100px;
         justify-content: space-around;
@@ -123,7 +121,7 @@
         @include breakpoint(tablet){
             margin-bottom: 0px;
         }
-        @include breakpoint(desktopxl){
+        @include breakpoint(desktop){
             font-size: 20px;
             font-weight: 300;
         }
@@ -146,7 +144,6 @@ footer.secundary{
     padding-right: 50px;
     padding-top: 40px;
     @include breakpoint(tablet){
-        width: 768px;
         height: 216px;
         display: flex;
         padding-left: 35px;
@@ -154,8 +151,7 @@ footer.secundary{
         gap: 60px;
         align-items: start;
     }
-    @include breakpoint(desktopxl){
-        width: 1910px;
+    @include breakpoint(desktop){
         height: 300px;
         justify-content: space-around;
         padding-right: 0px;
