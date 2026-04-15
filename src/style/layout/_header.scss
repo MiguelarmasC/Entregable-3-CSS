@@ -42,11 +42,10 @@
         }
     }
     .movil{
-        width: 100%;
+        width: calc(100% + 32px);
         max-height: 630px;
         position: relative;
         bottom: 16px;
-        right: 16px;
         margin-bottom: 15px;
     }
     .tablet{
