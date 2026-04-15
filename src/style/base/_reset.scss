@@ -12,6 +12,11 @@
   font-family: $general-font;
 }
 
+html {
+  overflow-y: scroll;
+  height: auto;
+}
+
 body {
   overflow-x: hidden;
   margin-left: auto;
