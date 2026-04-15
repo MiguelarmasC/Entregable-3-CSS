@@ -30,6 +30,7 @@ footer.principal{
         right: 16px;
     }
     .logotipo{
+        width: 30%;
         margin-bottom: 40px;
         @include breakpoint(tablet){
             margin: 0px;
