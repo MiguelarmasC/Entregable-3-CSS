@@ -3,39 +3,39 @@
 
 .primary{
     @include breakpoint(tablet){
-        position: relative;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
     }
     @include breakpoint(desktopxl){
-        padding-left: 150px;
-        padding-right: 150px;
+        padding: 0px;
+        min-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 3%;
     }
     .gallery{
         @include breakpoint(tablet){
-            max-width: 1120px;
             display: grid;
-            grid-template-columns: 400px 720px;
-            gap: 7px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 150px;
         }
         @include breakpoint(desktopxl){
-            grid-template-columns: 700px 1000px;
+            grid-template-columns: 1fr 1.5fr;
             gap: 35px;
         }
         img:first-of-type{
             margin-bottom: 30px;
             @include breakpoint(tablet){
-                position: relative;
-                right: 120px;
-                width: 400px;
-                max-height: 400px;
-                margin: 0px;
+                height: 400px;
+                margin-left: -67px;
+                margin-bottom: 0px;
+                width: calc(100% + 67px);
             }
             @include breakpoint(desktopxl){
-                right: 120px;
-                width: 1400px;
-                min-height: 500px;
-                right: 190px;
+                margin-left: -96px;
+                height: 500px;
+                width: 100%;
             }
         }
         .gallery_content{
@@ -47,12 +47,13 @@
                 line-height: 55px;
                 text-transform: uppercase;
                 @include breakpoint(tablet){
-                    width: 75%;
+                    width: 90%;
+                    margin-bottom: 30px;
                 }
                 @include breakpoint(desktopxl){
-                    width: 55%;
+                    width: 85%;
                     font-size: 70px;
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
                     line-height: 65px;
                     padding-bottom: 50px;
                 }
@@ -61,32 +62,30 @@
                 font-size: 18px; 
                 color: $grey;
                 margin-bottom: 40px;
-                max-width: 90%;
+                width: 70%;
                 @include breakpoint(tablet){
-                    width: 80%;
+                    width: 90%;
                     margin: 0px;
                 }
                 @include breakpoint(desktopxl){
-                    width: 65%;
+                    width: 95%;
                     font-size: 24px;
+                    line-height: 35px;
                 }
-                
             }
             @include breakpoint(tablet){
-                max-width: 291px;
-                max-height: 400px;
+                width: 80%;
+                height: 400px;
                 margin: 0px;
                 padding-top: 30px;
-                padding-left: 5px;
+                padding-left: 4%;
                 grid-row: 1 / 1;
             }
             @include breakpoint(desktopxl){
-                max-width: 600px;
-                max-height: 500px;
-                padding-top: 60px;
-                padding-left: 10px;
+                height: 500px;
+                padding-top: 80px;
+                padding-left: 3%;
             }
-
         }
         img:nth-of-type(2){
             margin-bottom: 20px;
@@ -94,33 +93,20 @@
                 width: 100%;
                 height: 720px;
                 margin: 0px;
-                margin-bottom: 100px;
             }
             @include breakpoint(desktopxl){
-                width: 700px;
                 height: 915px;
             }
         }
         .mv-dsk{
             margin-bottom: 20px;
             @include breakpoint(tablet){
-                display: none;
+                height: 311px;
+                margin: 0px;
             }
             @include breakpoint(desktopxl){
-                display: block;
-                width: 810px;
                 height: 430px;
-            }
-        }
-        .tbt{
-            display: none;
-            @include breakpoint(tablet){
-                display: block;
-                width: 40%;
-                height: 300px;
-            }
-            @include breakpoint(desktopxl){
-                display: none;
+                width: 90%;
             }
         }
     }

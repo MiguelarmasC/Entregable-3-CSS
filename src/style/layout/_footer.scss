@@ -3,17 +3,16 @@
 
 footer.principal{
     background-color: $black;
-    position: relative;
-    top: 16px;
-    right: 16px;
-    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: -16px;
+    width:calc(100% + 32px);
     height: 300px;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 40px;
     padding-bottom: 0px;
     @include breakpoint(tablet){
-        width: 750px;
         height: 216px;
         display: flex;
         padding-left: 35px;
@@ -22,7 +21,7 @@ footer.principal{
         align-items: start;
     }
     @include breakpoint(desktopxl){
-        width: 1910px;
+        width: 100vw;
         height: 300px;
         justify-content: space-between;
         padding-right: 0px;
@@ -63,7 +62,7 @@ footer.principal{
         margin-bottom: 40px;
         @include breakpoint(tablet){
             margin: 0px;
-            max-width: 45%;
+            width: 45%;
         }
         @include breakpoint(desktopxl){
             font-size: 24px;

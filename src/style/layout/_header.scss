@@ -2,11 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .container{
-    max-width: $bp-desktop-xl;
-    margin: 0px auto;
+    max-width: 1900px;
 }
 .hero{
-    position: relative;
     .tablet{
         display: none;
     }
@@ -15,8 +13,9 @@
     }
     @include breakpoint(tablet){
         position: relative;
-        margin-bottom: 120px;
-        max-width: 768px;
+        margin-bottom: 0px;
+        min-width: 768px;
+        height: 850px;
         .movil{
             display: none;
         }
@@ -25,14 +24,15 @@
         }
     }
     @include breakpoint(desktopxl){
+        margin-bottom: 200px;
         &::after{
             content: '';
             display: block;
-            width: 650px;
+            width: 40%;
             height: 920px;
             background-color: $black;
             position: relative;
-            top: -16px;
+            top: -1344px;
             left: -16px;
         }
         .tablet{
@@ -43,26 +43,29 @@
         }
     }
     .movil{
-        width: 100%;
+        width:calc(100% + 32px);
         max-height: 630px;
-        position: relative;
-        bottom: 16px;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
+        margin-left: -16px;
+        margin-right: -16px;
+        margin-top: -16px;
     }
     .tablet{
         @include breakpoint(tablet){
-            width: 437px;
-            height: 700px;
+            width: 55%;
+            height: 90%;
+            margin-left: -16px;
+            margin-top: -16px;
         }
     }
     .desktop{
         @include breakpoint(desktopxl){
-            position: absolute;
+            position: relative;
             top: -16px;
-            left: 634px;
-            width: 650px;
+            left: 40%;
+            width: 40%;
             height: 920px;
-
+            margin-left: -16px;
         }
     }
     h1{
@@ -73,22 +76,22 @@
         margin-bottom: 30px;
         font-weight: bold;
         @include breakpoint(tablet){
-        position: absolute;
-        max-width: 50%;
+        margin: 0px;
+        width: 50%;
         font-size: 70px;
         line-height: 65px;
         font-weight: 900;
-        top: 130px;
-        left: 334px;
+        position: relative;
+        bottom: 560px;
+        left: 46%;
         }
         @include breakpoint(desktopxl){
-            max-width: 100%;
             color: $white;
             z-index: 1;
             font-size: 130px;
             line-height: 110px;
-            top: 205px;
-            left: 360px;
+            top: -750px;
+            left: 224px;
         }
     }
     p{
@@ -97,18 +100,19 @@
         font-weight: 500;
         margin-bottom: 30px;
         @include breakpoint(tablet){
-        position: absolute;
-        max-width: 52%;
-        top: 320px;
-        left: 334px;
+        width: 50%;
         font-size: 20px;
+        margin: 0px;
+        position: relative;
+        bottom: 500px;
+        left: 47%;
         }
         @include breakpoint(desktopxl){
-            width: 50%;
-            top: 205px;
-            left: 1220px;
+            width: 25%;
+            top: -940px;
+            left: 74%;
             z-index: 1;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 400;
         }
     }
@@ -116,14 +120,15 @@
         display: inline-flex;
         margin-bottom: 120px;
         @include breakpoint(tablet){
-            position: absolute;
-            top: 480px;
-            left: 334px;
+            position: relative;
+            bottom: 445px;
+            left: 47%;
             width: 270px;
+            margin-bottom: 0px;
         }
         @include breakpoint(desktopxl){
-            left: 1220px;
-            top: 440px;
+            left: 75%;
+            top: -750px;
         }
         &:hover{
             a{
