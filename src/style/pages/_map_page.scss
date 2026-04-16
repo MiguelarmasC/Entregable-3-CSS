@@ -22,6 +22,7 @@
     }
     @include breakpoint(desktop){
         background-image: url(../../img/Maps-desktop.png);
+        background-size:cover;
         min-height: 790px;
     }
     .container_button{
@@ -141,16 +142,19 @@ footer.secundary{
     padding-right: 50px;
     padding-top: 40px;
     @include breakpoint(tablet){
+        height: 225px;
         display: flex;
+        padding-top: 65px;
         padding-left: 35px;
         padding-right: 35px;
         gap: 60px;
         align-items: start;
     }
-    @include breakpoint(desktop){
+    @include breakpoint(desktopxl){
         justify-content: space-around;
         padding-right: 0px;
         padding-top: 100px;
+        
     }
     .logo{
         margin-bottom: 50px;
@@ -172,7 +176,11 @@ footer.secundary{
         margin-bottom: 40px;
         @include breakpoint(tablet){
             position: relative;
-            left: 60px;
+            left: 10%;
+            margin: 0px;
+        }
+        @include breakpoint(desktopxl){
+            left: 0%;
         }
     }
     p{
@@ -181,6 +189,7 @@ footer.secundary{
         margin-bottom: 60px;
         @include breakpoint(tablet){
             width: 40%;
+            margin: 0px;
         }
         @include breakpoint(desktopxl){
             font-size: 24px;
